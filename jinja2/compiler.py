@@ -955,7 +955,7 @@ class CodeGenerator(NodeVisitor):
 
         if node.with_context:
             self.writeline('include_context = template.new_context('
-                           'context.parent, True, locals())')
+                           'context.parent, False, locals())')
             self.writeline('for name, context_blocks in context.'
                            'blocks.%s():' % dict_item_iter)
             self.indent()
